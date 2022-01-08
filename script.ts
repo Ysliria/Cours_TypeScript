@@ -19,3 +19,17 @@ form.addEventListener('submit', e => {
        `);
     }
 });
+
+let colors: Array<string> = ['red', 'blue', 'green', 'orange'];
+let numbers : number[];
+
+let test: (string | number | boolean)[] = ['test', 3, true];
+let others: Array<string|number|boolean>; // notation équivalente à la précédente
+
+let tuple: [string, number];
+
+let anObject: {color: string; year: number; speed: number} = {
+    color: 'red',
+    year: 2020,
+    speed: 240
+}
