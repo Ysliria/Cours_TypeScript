@@ -1,6 +1,6 @@
-var form = document.getElementById('signupForm');
-var firstname = document.getElementById('firstname');
-var age = document.getElementById('age');
+var form = document.getElementById('signupForm'); // Assertion Type
+var firstname = document.getElementById('firstname'); // Assertion Type
+var age = document.getElementById('age'); // Assertion Type
 function gift(age) {
     return age + 3;
 }
@@ -23,3 +23,34 @@ var anObject = {
     year: 2020,
     speed: 240
 };
+var aFunction; // type fonction
+// Objet ENUM
+var Level;
+(function (Level) {
+    Level[Level["ADMIN"] = 0] = "ADMIN";
+    Level[Level["MODERATOR"] = 1] = "MODERATOR";
+    Level[Level["SUPPORT"] = 2] = "SUPPORT";
+    Level[Level["USER_READ_ONLY"] = 3] = "USER_READ_ONLY";
+})(Level || (Level = {}));
+// on peut définir les index manuellement : ADMIN = 6
+// Appel : Level.ADMIN
+// Type ANY pas de vérificatin type UNKNOWN vérification : pivilégié UNKNOWN
+// Paramêtre optionnel
+function buildName(firstname, lastname) {
+    return firstname + ' ' + lastname;
+}
+// Valeur par défaut
+function reBuildName(firstname, lastname) {
+    if (lastname === void 0) { lastname = 'DOE'; }
+    return firstname + ' ' + lastname;
+}
+var aliasType; // équivaut à let aliasType: number|string;
+// Literal type :
+function calcul(arg1, arg2, calcul) {
+    if (calcul == 'addition') {
+        return arg1 + arg2;
+    }
+    else if (calcul == 'soustraction') {
+        return arg1 + arg2;
+    }
+}
